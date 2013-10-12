@@ -6,12 +6,12 @@
 <head>
   <meta charset="utf-8">
   <title>Blog Archive - My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <meta name="author" content="Tom Seals">
 
   
-  <meta name="description" content=" Blog Archive 2013 Gitting My Hands Dirty
+  <meta name="description" content="Blog Archive 2013 Gitting My Hands Dirty
 Oct 12 2013 First Post! :D
-Oct 12 2013 Recent Posts Gitting My Hands Dirty First Post! :D ">
+Oct 12 2013 Recent Posts Gitting My Hands Dirty First Post! :D GitHub Repos &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -40,13 +40,15 @@ Oct 12 2013 Recent Posts Gitting My Hands Dirty First Post! :D ">
   <header role="banner"><hgroup>
   <h1><a href="/">My Octopress Blog</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>A blog of my 10 weeks at MakerSquare</h2>
   
 </hgroup>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="tjseals@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a></li>
   
 </ul>
   
@@ -122,7 +124,45 @@ Oct 12 2013 Recent Posts Gitting My Hands Dirty First Post! :D ">
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/https://github.com/TomSeals">@https://github.com/TomSeals</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
+        github.showRepos({
+            user: 'https://github.com/TomSeals',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/https://plus.google.com/101251533745130745743/posts?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
 
 
 
@@ -133,7 +173,7 @@ Oct 12 2013 Recent Posts Gitting My Hands Dirty First Post! :D ">
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Your Name -
+  Copyright &copy; 2013 - Tom Seals -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -142,7 +182,24 @@ Oct 12 2013 Recent Posts Gitting My Hands Dirty First Post! :D ">
 
 
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 
